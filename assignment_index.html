@@ -1,99 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Homepage</title>
+    <title>Homepage</title>
 </head>
 
 <body>
-<h1>Welcome to Rapper GIFs</h1>
-<h2 id="show_tyler">Show Me Tyler!</h2>
-<div id= "tyler_pic">
-<img src="images_assignment/tyler.gif"> <h2>Click on Tyler!</h2>
-</div>
-
-<div id= "nav">
-	<ul>
-		<li><a href="#">HOME</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
-</div>
-
-<h1 id="site_title">Your favourite rappers' favourite rappers' GIF site</h1>
-<ol>
-	<li>American Rappers</li>
-</ol>	
-
-<img src="images_assignment/chance.gif">
- <br>
- <br>
-<h2>Click on DJ Khaled to make him BIIIG!</h2><img id= "khaled" src="images_assignment/khaled.gif">
- <ol>
-	<li>Grime artists</li>
-</ol>
-<h2>MOVE SKEPTA TO THE SIDE!</h2>
-
-<img id= "skepta_pic" src="images_assignment/skepta.gif" style="position: relative; left: 100px">
-<br>
-
-<div id= "clickme">
-<h2>Click ME!</h2>
-<p>Now you see me, now you DONT!</p>
-</div>
-
-<h3>Some text I am going to HIDE thanks to jQuery below</h3>
-
+    <h1>Welcome to Rapper GIFs</h1>
+    <h2 id="show_tyler">Show Me Tyler!</h2>
+    <div id="tyler_pic">
+        <img src="images_assignment/tyler.gif">
+        <h2>Click on Tyler!</h2>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <h1 id="site_title">Your favourite rappers' favourite rappers' GIF site</h1>
+    <ol>
+        <li>American Rappers</li>
+    </ol>
+    <img src="images_assignment/chance.gif">
+    <br>
+    <br>
+    <h2>Click on DJ Khaled to make him BIIIG!</h2><img id="khaled" src="images_assignment/khaled.gif">
+    <ol>
+        <li>Grime artists</li>
+    </ol>
+    <h2>MOVE SKEPTA TO THE SIDE!</h2>
+    <img id="skepta_pic" src="images_assignment/skepta.gif" style="position: relative; left: 100px">
+    <br>
+    <div id="clickme">
+        <h2>Click ME!</h2>
+        <p>Now you see me, now you DONT!</p>
+    </div>
+    <h3>Some text I am going to HIDE thanks to jQuery below</h3>
+    
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#skepta_pic").click(function() {
+            $("#skepta_pic").animate({
+                left: "+=100"
+            });
+        });
 
-<script type="text/javascript">
+        $('#tyler_pic').hide();
 
-$(document).ready(function(){
-	$("#skepta_pic").click(function(){
-   		$("#skepta_pic").animate({
-   			left: "+=100"
-   					});
-	});
+        $('body').css({
+            "background-color": "#F3F781"
+        });
 
-	$('#tyler_pic').hide();
-
-	$('body').css({
-	"background-color": "#F3F781"
-		    	});
-	
-	$('#show_tyler').click(function() {
-  	$('#tyler_pic').toggle('slow', function() {
-   				  });
+        $('#show_tyler').click(function() {
+            $('#tyler_pic').toggle('slow', function() {});
 
 
-	$("#tyler_pic").on('click', function(){
-		$('#tyler_pic').fadeOut("slow");
-		$('#tyler_pic').fadeIn("slow");
-					});
-	
-	$("#nav").hover(function(){
-    	$("#nav").css("background-color", "yellow");
-    	$("#nav").css("background-color", "pink");
-    					});
-
-	$("#khaled").click(function(){
-	    $("#khaled").animate({
-	        left: '250px',
-	        height: '550px',
-	        width: '900px'
+	    $("#tyler_pic").on('click', function() {
+	        $('#tyler_pic').fadeOut("slow");
+	        $('#tyler_pic').fadeIn("slow");
 	    });
-	}); 
 
+	    $("#nav").hover(function() {
+	        $("#nav").css("background-color", "yellow");
+	        $("#nav").css("background-color", "pink");
+	    });
 
-	$( "#clickme" ).click(function() {
-  	$( "p" ).slideToggle( "slow" );
-					});
+	    $("#khaled").click(function() {
+	        $("#khaled").animate({
+	            left: '250px',
+	            height: '550px',
+	            width: '900px'
+	        });
+	    });
 
-	$('h3').hide();
+	    $("#clickme").click(function() {
+	        $("p").slideToggle("slow");
+	    });
 
+	    $('h3').hide();
+	});
 });
-	
-	
-});
-
 </script>
 </body>
+
 </html>

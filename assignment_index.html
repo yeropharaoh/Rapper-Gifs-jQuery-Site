@@ -39,22 +39,22 @@
     <h3>Some text I am going to HIDE thanks to jQuery below</h3>
     
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
+ <script type="text/javascript">
     $(document).ready(function() {
-        $("#skepta_pic").click(function() {
-            $("#skepta_pic").animate({
-                left: "+=100"
-            });
-        });
+	    $("#skepta_pic").click(function() {
+	        $("#skepta_pic").animate({
+	            left: "+=100"
+	        });
+	    });
 
-        $('#tyler_pic').hide();
+	    $('#tyler_pic').hide();
 
-        $('body').css({
-            "background-color": "#F3F781"
-        });
+	    $('body').css({
+	        "background-color": "#F3F781"
+	    });
 
-        $('#show_tyler').click(function() {
-            $('#tyler_pic').toggle('slow', function() {});
+	    $('#show_tyler').click(function() {
+	        $('#tyler_pic').toggle('slow', function() {});
 
 
 	    $("#tyler_pic").on('click', function() {
